@@ -1,4 +1,4 @@
-const Todo = require("../model/todoModel");
+const Todo = require('../model/todoModel');
 
 exports.getTodos = async (req, res) => {
   const todos = await Todo.find();
@@ -6,5 +6,5 @@ exports.getTodos = async (req, res) => {
 };
 exports.createTodo = async (req, res) => {
   const todos = await Todo.create(req.body);
-  res.send("Hello");
+  res.json('To do saved');
 };
